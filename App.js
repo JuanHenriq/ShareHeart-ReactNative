@@ -7,17 +7,41 @@ import RegisterScreen from './screens/user_register/userRegister';
 import HomeScreen from './screens/home/home';
 
 const Tab = createBottomTabNavigator();
-
 const Stack = createStackNavigator();
+
+const MainStackNavigator = () => {
+  return (
+    <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Home" component={HomeScreen} />
+      {/* Adicione outras telas aqui, se necessário */}
+    </Stack.Navigator>
+  );
+}
+
+const LoginStackNavigator = () => {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Login" component={LoginScreen} />
+    </Stack.Navigator>
+  );
+}
+
+const RegisterStackNavigator = () => {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Register" component={RegisterScreen} />
+    </Stack.Navigator>
+  );
+}
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Register" component={RegisterScreen} />
-        <Stack.Screen name="Home" component={HomeScreen} />
-      </Stack.Navigator>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={MainStackNavigator} />
+        <Tab.Screen name="Login" component={LoginStackNavigator} />
+        <Tab.Screen name="Register" component={RegisterStackNavigator} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
