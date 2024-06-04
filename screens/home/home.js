@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, Image, TouchableOpacity, Button, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { signOutUser } from '../../services/auth';
+import { signOutUser, getCurrentUser } from '../../services/auth';
 import styles from './styles';
 
 export default function HomeScreen({ route }) {
+  const [userName, setUserName] = useState('User');
   const navigation = useNavigation();
-  const userName = route.params?.userName || 'User';
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await getCurrentUser();
+      if (user && user.displayName) {
+        setUserName(user.displayName);
+      }
+    };
+    fetchUser();
+  }, [route.params?.userName]);
 
   const handleLogout = async () => {
     await signOutUser();

@@ -14,7 +14,7 @@ export default function LoginScreen() {
   const handleLogin = async () => {
     try {
       await signIn(email, password);
-      const userName = auth.currentUser.displayName; // Assumindo que auth é importado corretamente
+      const userName = auth.currentUser.displayName;
       Toast.show({
         type: 'success',
         text1: 'Login Successful',
