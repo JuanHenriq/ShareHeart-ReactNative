@@ -14,6 +14,8 @@ export default function HomeScreen({ route }) {
       const user = await getCurrentUser();
       if (user && user.displayName) {
         setUserName(user.displayName);
+      } else {
+        setUserName('User');
       }
     };
     fetchUser();
@@ -21,6 +23,7 @@ export default function HomeScreen({ route }) {
 
   const handleLogout = async () => {
     await signOutUser();
+    setUserName(null);
     navigation.navigate('Profile', { screen: 'Login' });
   };
 
