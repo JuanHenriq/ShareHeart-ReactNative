@@ -19,7 +19,7 @@ export default function LoginScreen() {
         type: 'success',
         text1: 'Login Successful',
       });
-      navigation.navigate('Home', { userName });
+      navigation.navigate('HomeMain', { userName });
     } catch (error) {
       const errorMessage = error.message ? error.message : 'Unknown error';
       Toast.show({

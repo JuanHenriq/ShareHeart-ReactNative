@@ -3,6 +3,7 @@ import { View, Text, Image, TouchableOpacity, Button, ScrollView } from 'react-n
 import { useNavigation } from '@react-navigation/native';
 import { signOutUser, getCurrentUser } from '../../services/auth';
 import styles from './styles';
+import destaques from '../../data/destaques.json';
 
 export default function HomeScreen({ route }) {
   const [userName, setUserName] = useState('User');
@@ -20,7 +21,11 @@ export default function HomeScreen({ route }) {
 
   const handleLogout = async () => {
     await signOutUser();
-    navigation.navigate('Login');
+    navigation.navigate('Profile', { screen: 'Login' });
+  };
+
+  const handleHighlightPress = (item) => {
+    navigation.navigate('DetalhesDestaque', { item });
   };
 
   return (
@@ -35,7 +40,6 @@ export default function HomeScreen({ route }) {
         </View>
 
         <View style={styles.banner}>
-          {/* Conteúdo do banner aqui */}
           <TouchableOpacity style={styles.bannerButton}>
             <Text style={styles.bannerButtonText}>Botão do Banner</Text>
           </TouchableOpacity>
@@ -74,18 +78,14 @@ export default function HomeScreen({ route }) {
         <View style={styles.highlightSection}>
           <Text style={styles.highlightTitle}>DESTAQUES</Text>
           <View style={styles.highlight}>
-            <View style={styles.highlightItem}>
-              <TouchableOpacity>
-                <Image source={{ uri: 'https://via.placeholder.com/100' }} style={styles.highlightImage} />
-                <Text style={styles.highlightText}>Destaque 1</Text>
-              </TouchableOpacity>
-            </View>
-            <View style={styles.highlightItem}>
-              <TouchableOpacity>
-                <Image source={{ uri: 'https://via.placeholder.com/100' }} style={styles.highlightImage} />
-                <Text style={styles.highlightText}>Destaque 2</Text>
-              </TouchableOpacity>
-            </View>
+            {destaques.map((item, index) => (
+              <View key={index} style={styles.highlightItem}>
+                <TouchableOpacity onPress={() => handleHighlightPress(item)}>
+                  <Image source={{ uri: item.foto, }} style={styles.highlightImage} />
+                  <Text style={styles.highlightText}>{item.titulo}</Text>
+                </TouchableOpacity>
+              </View>
+            ))}
           </View>
         </View>
 

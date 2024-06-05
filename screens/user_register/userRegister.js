@@ -20,7 +20,7 @@ export default function RegisterScreen() {
           text1: 'Registration Successful',
           text2: `Bem-vindo, ${user.name}`
         });
-        navigation.navigate('Home', { userName: user.name });
+        navigation.navigate('HomeMain', { userName: user.name });
       } else {
         Toast.show({
           type: 'error',

@@ -44,10 +44,15 @@ export async function signOutUser() {
     }
 }
 
+export async function getCurrentUser() {
+    return auth.currentUser;
+}
+
 const Auth = {
     signUp,
     signIn,
-    signOutUser
+    signOutUser,
+    getCurrentUser
 };
 
 export default Auth;

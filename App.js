@@ -7,6 +7,7 @@ import LoginScreen from './screens/user_login/userLogin';
 import RegisterScreen from './screens/user_register/userRegister';
 import HomeScreen from './screens/home/home';
 import ProfileScreen from './screens/profile/profile';
+import HighlightScreen from './screens/highlight/highlight';  
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -14,7 +15,12 @@ const Tab = createBottomTabNavigator();
 const HomeStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="HomeMain" component={HomeScreen} />
+      <Stack.Screen 
+        name="DetalhesDestaque" 
+        component={HighlightScreen} 
+        options={{ headerShown: true, title: 'Detalhes do Destaque' }} 
+      />
     </Stack.Navigator>
   );
 }
@@ -22,7 +28,7 @@ const HomeStackNavigator = () => {
 const ProfileStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Profile" component={ProfileScreen} />
+      <Stack.Screen name="ProfileMain" component={ProfileScreen} />
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Register" component={RegisterScreen} />
     </Stack.Navigator>
