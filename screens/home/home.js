@@ -28,7 +28,7 @@ export default function HomeScreen({ route }) {
   };
 
   const handleHighlightPress = (item) => {
-    navigation.navigate('DetalhesDestaque', { item });
+    navigation.navigate('Destaques', { item });
   };
 
   return (
@@ -43,8 +43,9 @@ export default function HomeScreen({ route }) {
         </View>
 
         <View style={styles.banner}>
+          <Image source={require('../../assets/banner.jpg')} style={styles.banner} />
           <TouchableOpacity style={styles.bannerButton}>
-            <Text style={styles.bannerButtonText}>Botão do Banner</Text>
+            <Text style={styles.bannerButtonText}>Faça doação</Text>
           </TouchableOpacity>
         </View>
 
@@ -53,26 +54,34 @@ export default function HomeScreen({ route }) {
           <View style={styles.category}>
             <View style={styles.categoryItem}>
               <TouchableOpacity>
-                <Image source={{ uri: 'https://via.placeholder.com/100' }} style={styles.categoryImage} />
-                <Text style={styles.categoryText}>Categoria 1</Text>
+                <View style={styles.categoryContainer}>
+                  <Image source={require('../../assets/cifrao.png')} style={styles.categoryImage} />
+                </View>
+                <Text style={styles.categoryText}>Dinheiro</Text>
               </TouchableOpacity>
             </View>
             <View style={styles.categoryItem}>
               <TouchableOpacity>
-                <Image source={{ uri: 'https://via.placeholder.com/100' }} style={styles.categoryImage} />
-                <Text style={styles.categoryText}>Categoria 2</Text>
+                <View style={styles.categoryContainer}>
+                  <Image source={require('../../assets/camiseta.png')} style={styles.categoryImage} />
+                </View>
+                <Text style={styles.categoryText}>Roupa</Text>
               </TouchableOpacity>
             </View>
             <View style={styles.categoryItem}>
               <TouchableOpacity>
-                <Image source={{ uri: 'https://via.placeholder.com/100' }} style={styles.categoryImage} />
-                <Text style={styles.categoryText}>Categoria 3</Text>
+                <View style={styles.categoryContainer}>
+                  <Image source={require('../../assets/alimentos.png')} style={styles.categoryImage} />
+                </View>
+                <Text style={styles.categoryText}>Alimento</Text>
               </TouchableOpacity>
             </View>
             <View style={styles.categoryItem}>
               <TouchableOpacity>
-                <Image source={{ uri: 'https://via.placeholder.com/100' }} style={styles.categoryImage} />
-                <Text style={styles.categoryText}>Categoria 4</Text>
+                <View style={styles.categoryContainer}>
+                  <Image source={require('../../assets/voluntariado.png')} style={styles.categoryImage} />
+                </View>
+                <Text style={styles.categoryText}>Voluntário</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -84,7 +93,7 @@ export default function HomeScreen({ route }) {
             {destaques.map((item, index) => (
               <View key={index} style={styles.highlightItem}>
                 <TouchableOpacity onPress={() => handleHighlightPress(item)}>
-                  <Image source={{ uri: item.foto, }} style={styles.highlightImage} />
+                  <Image source={{ uri: item.foto }} style={styles.highlightImage} />
                   <Text style={styles.highlightText}>{item.titulo}</Text>
                 </TouchableOpacity>
               </View>

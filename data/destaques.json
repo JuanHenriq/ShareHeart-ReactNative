@@ -1,18 +1,18 @@
 [
     {
-        "foto": "https://shareheart.netlify.app/assets/img/doacao_palestina.avif",
+        "foto": "https://firebasestorage.googleapis.com/v0/b/shareheart-73b1a.appspot.com/o/Images%2Fdoacao_palestina.png?alt=media&token=8444d513-6418-47fa-8502-7c4294556ff7",
         "titulo": "Corações solidários",
         "descricao": "Apoie causas sociais e fortaleça comunidades. Sua contribuição faz a diferença na vida de muitos.",
-        "telefone": "<a href='tel:+5581912345678'>+55 81 91234-5678</a>",
-        "email": "<a href='mailto:fundacaocoracoes@contato.com'>fundacaocoracoes@contato.com</a>",
+        "telefone": "+55 81 91234-5678",
+        "email": "fundacaocoracoes@contato.com",
         "endereco": "Rua Exemplo, 123"
     },
     {
-        "foto": "https://shareheart.netlify.app/assets/img/crianca_doacao.avif",
+        "foto": "https://firebasestorage.googleapis.com/v0/b/shareheart-73b1a.appspot.com/o/Images%2Fcrianca_doacao.png?alt=media&token=fe754840-3e22-4d36-b8c8-a4dfd107cffb",
         "titulo": "Futuro da criança",
         "descricao": "Ajude a construir um futuro brilhante. Sua doação traz esperança e oportunidades para crianças necessitadas.",
-        "telefone": "<a href='tel:+5581912345678'>+55 81 91234-5678</a>",
-        "email": "<a href='mailto:fundacaocrianca@contato.com'>fundacaocrianca@contato.com</a>",
+        "telefone": "+55 81 91234-5678",
+        "email": "fundacaocrianca@contato.com",
         "endereco": "Rua Exemplo, 123"
     }
 ]

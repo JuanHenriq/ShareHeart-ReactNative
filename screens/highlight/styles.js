@@ -1,10 +1,17 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
+
+  container: {
+    backgroundColor: 'white',
+    },
+  containerDescription: {
+    flex: 1,
+    padding: 16,
+    },
     detailImage: {
       width: '100%',
       height: 200,
-      borderRadius: 8,
       marginBottom: 16,
     },
     detailTitle: {
@@ -19,6 +26,7 @@ const styles = StyleSheet.create({
     detailContact: {
       fontSize: 14,
       marginBottom: 8,
+      color: '#FF7700',
     },
  });
   
