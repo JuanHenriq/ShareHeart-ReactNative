@@ -15,7 +15,7 @@ export default function HomeScreen({ route }) {
       if (user && user.displayName) {
         setUserName(user.displayName);
       } else {
-        setUserName('User');
+        setUserName('');
       }
     };
     fetchUser();

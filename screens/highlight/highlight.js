@@ -7,7 +7,7 @@ export default function HighlightScreen({ route }) {
 
   return (
     <ScrollView style={styles.container}>
-      <Image source={{ uri: item.foto }} style={styles.detailImage} />
+      <Image source={{ uri: item.foto, headers: { 'Accept': 'image/*'}, }} style={styles.detailImage} />
       <Text style={styles.detailTitle}>{item.titulo}</Text>
       <Text style={styles.detailDescription}>{item.descricao}</Text>
       <Text style={styles.detailContact}>Telefone: {item.telefone}</Text>
