@@ -1,12 +1,13 @@
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import LoginScreen from "../screens/user_login/userLogin";
-import RegisterScreen from "../screens/user_register/userRegister";
-import HomeScreen from "../screens/home/home";
-import ProfileScreen from "../screens/profile/profile";
-import HighlightScreen from "../screens/highlight/highlight";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import LoginScreen from '../screens/user_login/userLogin';
+import RegisterScreen from '../screens/user_register/userRegister';
+import HomeScreen from '../screens/home/home';
+import ProfileScreen from '../screens/profile/profile';
+import HighlightScreen from '../screens/highlight/highlight';
+import NewsScreen from '../screens/news/news';  
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -28,6 +29,11 @@ function HomeStackNavigator() {
           headerBackTitleVisible: false,
         })}
       />
+      <Stack.Screen 
+        name="Notícias"
+        component={NewsScreen}
+        options={{ headerShown: true, title: 'Notícias' }}
+      />
     </Stack.Navigator>
   );
 }
@@ -47,6 +53,7 @@ export function AppNavigation({ initialRoute }) {
     <NavigationContainer>
       <Tab.Navigator initialRouteName={initialRoute}>
         <Tab.Screen name="Home" component={HomeStackNavigator} />
+        <Tab.Screen name="Notícias" component={NewsScreen} />
         <Tab.Screen name="Profile" component={ProfileStackNavigator} />
       </Tab.Navigator>
     </NavigationContainer>

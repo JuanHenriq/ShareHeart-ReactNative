@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, Image, TouchableOpacity, Button, ScrollView } from 'react-native';
+import React from 'react';
+import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { signOutUser, getCurrentUser } from '../../services/auth';
 import styles from './styles';
 import destaques from '../../data/destaques.json';
 
-export default function HomeScreen({ route }) {
-  
-  
+export default function HomeScreen() {
+  const navigation = useNavigation();
+
   const handleHighlightPress = (item) => {
     navigation.navigate('Destaques', { item });
   };
