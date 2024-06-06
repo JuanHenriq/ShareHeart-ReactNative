@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, TouchableOpacity, Text } from 'react-native';
+import { View, TextInput, TouchableOpacity, Text, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { signIn } from '../../services/auth';
 import Toast from 'react-native-toast-message';
@@ -19,7 +19,7 @@ export default function LoginScreen() {
         type: 'success',
         text1: 'Login Successful',
       });
-      navigation.navigate('HomeMain', { userName });
+      navigation.navigate('ProfileMain', { userName });
     } catch (error) {
       const errorMessage = error.message ? error.message : 'Unknown error';
       Toast.show({
@@ -32,6 +32,7 @@ export default function LoginScreen() {
 
   return (
     <View style={styles.container}>
+      <Image source={require('../../assets/main_icon.png')} style={styles.icon} />
       <TextInput
         style={styles.input}
         placeholder="Email"
@@ -42,14 +43,17 @@ export default function LoginScreen() {
       />
       <TextInput
         style={styles.input}
-        placeholder="Password"
+        placeholder="Senha"
         onChangeText={setPassword}
         value={password}
         secureTextEntry
         autoCapitalize="none"
       />
-      <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>Login</Text>
+      <TouchableOpacity style={[styles.button, styles.loginButton]} onPress={handleLogin}>
+        <Text style={styles.buttonText}>Fazer Login</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+        <Text style={styles.linkText}>Não possui uma conta? Registrar-se</Text>
       </TouchableOpacity>
       <Toast />
     </View>

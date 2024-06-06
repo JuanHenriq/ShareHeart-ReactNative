@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, TouchableOpacity, Text } from 'react-native';
+import { View, TextInput, TouchableOpacity, Text, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { signUp } from '../../services/auth';
 import Toast from 'react-native-toast-message';
@@ -40,6 +40,7 @@ export default function RegisterScreen() {
 
   return (
     <View style={styles.container}>
+      <Image source={require('../../assets/main_icon.png')} style={styles.icon} />
       <TextInput
         style={styles.input}
         placeholder="Nome"
@@ -56,14 +57,17 @@ export default function RegisterScreen() {
       />
       <TextInput
         style={styles.input}
-        placeholder="Password"
+        placeholder="Senha"
         onChangeText={setPassword}
         value={password}
         secureTextEntry
         autoCapitalize="none"
       />
-      <TouchableOpacity style={styles.button} onPress={handleRegister}>
-        <Text style={styles.buttonText}>Register</Text>
+      <TouchableOpacity style={[styles.button, styles.registerButton]} onPress={handleRegister}>
+        <Text style={styles.buttonText}>Regitrar-se</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+        <Text style={styles.linkText}>Já possui uma conta? Faça Login</Text>
       </TouchableOpacity>
       <Toast />
     </View>

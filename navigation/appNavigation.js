@@ -12,26 +12,25 @@ const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 function HomeStackNavigator() {
-    return (
-      <Stack.Navigator>
-        <Stack.Screen 
-          name="HomeMain" 
-          component={HomeScreen} 
-          options={{ headerShown: false }} 
-        />
-        <Stack.Screen
-          name="Destaques"
-          component={HighlightScreen}
-          options={({ route }) => ({
-            headerShown: true,
-            title: route.params.item.titulo,
-            headerBackTitleVisible: false,
-          })}
-        />
-      </Stack.Navigator>
-    );
-  }
-  
+  return (
+    <Stack.Navigator>
+      <Stack.Screen 
+        name="HomeMain" 
+        component={HomeScreen} 
+        options={{ headerShown: false }} 
+      />
+      <Stack.Screen
+        name="Destaques"
+        component={HighlightScreen}
+        options={({ route }) => ({
+          headerShown: true,
+          title: route.params.item.titulo,
+          headerBackTitleVisible: false,
+        })}
+      />
+    </Stack.Navigator>
+  );
+}
 
 function ProfileStackNavigator() {
   return (

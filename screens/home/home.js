@@ -6,27 +6,8 @@ import styles from './styles';
 import destaques from '../../data/destaques.json';
 
 export default function HomeScreen({ route }) {
-  const [userName, setUserName] = useState('User');
-  const navigation = useNavigation();
-
-  useEffect(() => {
-    const fetchUser = async () => {
-      const user = await getCurrentUser();
-      if (user && user.displayName) {
-        setUserName(user.displayName);
-      } else {
-        setUserName('');
-      }
-    };
-    fetchUser();
-  }, [route.params?.userName]);
-
-  const handleLogout = async () => {
-    await signOutUser();
-    setUserName(null);
-    navigation.navigate('Profile', { screen: 'Login' });
-  };
-
+  
+  
   const handleHighlightPress = (item) => {
     navigation.navigate('Destaques', { item });
   };
@@ -36,7 +17,7 @@ export default function HomeScreen({ route }) {
       <ScrollView style={styles.scrollContainer} contentContainerStyle={styles.scrollContent}>
         <View style={styles.header}>
           <View>
-            <Text style={styles.headerText}>Olá, {userName}</Text>
+            <Text style={styles.headerText}>Olá, seja</Text>
             <Text style={styles.welcomeText}>BEM-VINDO!</Text>
           </View>
           <Image source={require('../../assets/profile.png')} style={styles.profileImage} />
@@ -100,8 +81,6 @@ export default function HomeScreen({ route }) {
             ))}
           </View>
         </View>
-
-        <Button title="Logout" onPress={handleLogout} color="#e74c3c" />
       </ScrollView>
     </View>
   );
