@@ -7,7 +7,8 @@ import RegisterScreen from '../screens/user_register/userRegister';
 import HomeScreen from '../screens/home/home';
 import ProfileScreen from '../screens/profile/profile';
 import HighlightScreen from '../screens/highlight/highlight';
-import NewsScreen from '../screens/news/news';  
+import NewsScreen from '../screens/news/news';
+import DonateScreen from '../screens/donate/donate';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -53,6 +54,7 @@ export function AppNavigation({ initialRoute }) {
     <NavigationContainer>
       <Tab.Navigator initialRouteName={initialRoute}>
         <Tab.Screen name="Home" component={HomeStackNavigator} />
+        <Tab.Screen name="Doar" component={DonateScreen} />
         <Tab.Screen name="Notícias" component={NewsScreen} />
         <Tab.Screen name="Profile" component={ProfileStackNavigator} />
       </Tab.Navigator>
