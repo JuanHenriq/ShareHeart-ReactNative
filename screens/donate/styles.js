@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { RadioButton } from 'react-native-paper';
 
 export default StyleSheet.create({
   container: {
@@ -58,5 +57,48 @@ export default StyleSheet.create({
     marginBottom: 8,
     color: '#FF7700',
   },
-
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  modalView: {
+    width: 300,
+    backgroundColor: 'white',
+    borderRadius: 10,
+    padding: 20,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: 'center',
+    fontSize: 16,
+  },
+  input: {
+    height: 40,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    width: '100%',
+    marginBottom: 15,
+    paddingLeft: 8,
+  },
+  donateButton: {
+    color: '#FF7700',
+    marginTop: 10,
+  },
+  modalButtonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 10,
+  },  
 });
+
