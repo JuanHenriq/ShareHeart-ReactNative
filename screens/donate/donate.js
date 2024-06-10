@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import {View,text,TouchableOpacity,Image,Linking,Modal,TextInput,Button} from "react-native";
+import React, { useState, useEffect } from "react";
+import { View, Text, TouchableOpacity, Image, Linking, Modal, TextInput, Button } from "react-native";
 import { RadioButton } from "react-native-paper";
 import styles from "./styles";
 import alimentosData from "../../data/alimentos.json";
@@ -8,7 +8,7 @@ import dinheiroData from "../../data/dinheiro.json";
 import roupasData from "../../data/roupas.json";
 import { auth } from "../../firebaseConfig";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 
 const Donate = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -17,7 +17,15 @@ const Donate = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [donationAmount, setDonationAmount] = useState("");
   const navigation = useNavigation();
+  const route = useRoute();
   const db = getFirestore();
+
+  useEffect(() => {
+    const { selectedCategory } = route.params;
+    if (selectedCategory) {
+      handleCategorySelect(selectedCategory);
+    }
+  }, [route.params]);
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
@@ -146,8 +154,8 @@ const Donate = () => {
           <TouchableOpacity onPress={() => handleAddressPress(item.endereco)}>
             <Text style={styles.detailContact}>Endereço: {item.endereco}</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => handleDonatePress(item)}>
-            <Text style={styles.donateButton}>Doar</Text>
+          <TouchableOpacity style={styles.donateButton} onPress={() => handleDonatePress(item)}>
+            <Text style={styles.donateButtonText}>Doar</Text>
           </TouchableOpacity>
         </View>
       ))}

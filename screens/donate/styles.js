@@ -35,6 +35,7 @@ export default StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+    marginBottom: 20, // Add margin between cards
   },
   cardImage: {
     width: '100%',
@@ -92,8 +93,17 @@ export default StyleSheet.create({
     paddingLeft: 8,
   },
   donateButton: {
-    color: '#FF7700',
+    backgroundColor: '#FF7700',
+    borderRadius: 5,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
     marginTop: 10,
+    alignItems: 'center',
+  },
+  donateButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
   modalButtonContainer: {
     flexDirection: 'row',
@@ -101,4 +111,3 @@ export default StyleSheet.create({
     marginTop: 10,
   },  
 });
-

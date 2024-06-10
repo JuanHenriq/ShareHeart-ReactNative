@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity, Button, ScrollView } from 'react-n
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import styles from './styles';
 import { getCurrentUser, signOutUser } from '../../services/auth';
-import { getFirestore, collection, query, where, getDocs } from 'firebase/firestore';
+import { getFirestore, collection, query, where, getDocs, onSnapshot } from 'firebase/firestore';
 import { auth } from '../../firebaseConfig';
 import { List } from 'react-native-paper';
 
@@ -29,12 +29,16 @@ export default function ProfileScreen() {
     const fetchDonations = async () => {
       if (auth.currentUser) {
         const q = query(collection(db, "donations"), where("userId", "==", auth.currentUser.uid));
-        const querySnapshot = await getDocs(q);
-        const userDonations = [];
-        querySnapshot.forEach((doc) => {
-          userDonations.push(doc.data());
+        
+        const unsubscribe = onSnapshot(q, (snapshot) => {
+          let userDonations = [];
+          snapshot.forEach((doc) => {
+            userDonations.push(doc.data());
+          });
+          setDonations(userDonations);
         });
-        setDonations(userDonations);
+
+        return () => unsubscribe();
       }
     };
 
@@ -48,7 +52,7 @@ export default function ProfileScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container} contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', alignItems: 'center' }}>
       <View style={styles.header}>
         <Image source={require('../../assets/profile.png')} style={styles.profileImage} />
         <View style={styles.headerTextContainer}>
@@ -60,7 +64,6 @@ export default function ProfileScreen() {
       </View>
       {user ? (
         <>
-          <Button title="Logout" onPress={handleLogout} color="#e74c3c" />
           <View style={styles.donationHistoryContainer}>
             <List.Accordion
               title="Histórico de Doações"
@@ -75,6 +78,7 @@ export default function ProfileScreen() {
               ))}
             </List.Accordion>
           </View>
+          <Button title="Logout" onPress={handleLogout} color="#e74c3c" />
         </>
       ) : (
         <>
@@ -86,6 +90,6 @@ export default function ProfileScreen() {
           </TouchableOpacity>
         </>
       )}
-    </View>
+    </ScrollView>
   );
 }

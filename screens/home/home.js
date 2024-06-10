@@ -11,6 +11,10 @@ export default function HomeScreen() {
     navigation.navigate('Destaques', { item });
   };
 
+  const handleCategoryPress = (category) => {
+    navigation.navigate('Doar', { selectedCategory: category });
+  };
+
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scrollContainer} contentContainerStyle={styles.scrollContent}>
@@ -33,7 +37,23 @@ export default function HomeScreen() {
           <Text style={styles.categoryTitle}>CATEGORIAS</Text>
           <View style={styles.category}>
             <View style={styles.categoryItem}>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => handleCategoryPress('alimentos')}>
+                <View style={styles.categoryContainer}>
+                  <Image source={require('../../assets/alimentos.png')} style={styles.categoryImage} />
+                </View>
+                <Text style={styles.categoryText}>Alimentos</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.categoryItem}>
+              <TouchableOpacity onPress={() => handleCategoryPress('causas')}>
+                <View style={styles.categoryContainer}>
+                  <Image source={require('../../assets/voluntariado.png')} style={styles.categoryImage} />
+                </View>
+                <Text style={styles.categoryText}>Causas Sociais</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.categoryItem}>
+              <TouchableOpacity onPress={() => handleCategoryPress('dinheiro')}>
                 <View style={styles.categoryContainer}>
                   <Image source={require('../../assets/cifrao.png')} style={styles.categoryImage} />
                 </View>
@@ -41,27 +61,11 @@ export default function HomeScreen() {
               </TouchableOpacity>
             </View>
             <View style={styles.categoryItem}>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => handleCategoryPress('roupas')}>
                 <View style={styles.categoryContainer}>
                   <Image source={require('../../assets/camiseta.png')} style={styles.categoryImage} />
                 </View>
-                <Text style={styles.categoryText}>Roupa</Text>
-              </TouchableOpacity>
-            </View>
-            <View style={styles.categoryItem}>
-              <TouchableOpacity>
-                <View style={styles.categoryContainer}>
-                  <Image source={require('../../assets/alimentos.png')} style={styles.categoryImage} />
-                </View>
-                <Text style={styles.categoryText}>Alimento</Text>
-              </TouchableOpacity>
-            </View>
-            <View style={styles.categoryItem}>
-              <TouchableOpacity>
-                <View style={styles.categoryContainer}>
-                  <Image source={require('../../assets/voluntariado.png')} style={styles.categoryImage} />
-                </View>
-                <Text style={styles.categoryText}>Voluntário</Text>
+                <Text style={styles.categoryText}>Roupas</Text>
               </TouchableOpacity>
             </View>
           </View>
