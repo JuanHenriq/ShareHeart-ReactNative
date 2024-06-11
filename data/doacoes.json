@@ -1,0 +1,35 @@
+[
+    {
+        "foto": "https://firebasestorage.googleapis.com/v0/b/shareheart-73b1a.appspot.com/o/Images%2Fdoacao_alimento.png?alt=media&token=90bee118-d73f-429c-b703-7d32e9a3c10a",
+        "titulo": "Alimente a Esperança",
+        "descricao": "Sua contribuição pode transformar vidas. Com sua ajuda, podemos proporcionar nutrição, educação e um futuro melhor para crianças em situação de vulnerabilidade. Ajude-nos a alimentar sonhos e construir um mundo mais justo e cheio de oportunidades para todos.",
+        "telefone": "+55 81 91234-5678",
+        "email": "fundacaocrianca@contato.com",
+        "endereco": "Rua Exemplo, 123",
+        "site": "https://www.google.com"
+    },
+    {
+        "foto": "https://firebasestorage.googleapis.com/v0/b/shareheart-73b1a.appspot.com/o/Images%2Fdoacao_banner.jpg?alt=media&token=040a61b5-6c41-4652-bcf1-ff114c3d040b",
+        "titulo": "Dê um Passo à Frente",
+        "descricao": "Sua contribuição pode transformar vidas. Com sua ajuda, podemos proporcionar nutrição, educação e um futuro melhor para crianças em situação de vulnerabilidade. Ajude-nos a alimentar sonhos e construir um mundo mais justo e cheio de oportunidades para todos.",
+        "telefone": "+55 81 91234-5678",
+        "email": "fundacaocrianca@contato.com",
+        "endereco": "Rua Exemplo, 123"
+    },
+    {
+        "foto": "https://firebasestorage.googleapis.com/v0/b/shareheart-73b1a.appspot.com/o/Images%2Fdoacao_palestina.png?alt=media&token=8444d513-6418-47fa-8502-7c4294556ff7",
+        "titulo": "Corações solidários",
+        "descricao": "Apoie causas sociais e fortaleça comunidades. Sua contribuição faz a diferença na vida de muitos.",
+        "telefone": "+55 81 91234-5678",
+        "email": "fundacaocoracoes@contato.com",
+        "endereco": "Rua Exemplo, 123"
+    },
+    {
+        "foto": "https://firebasestorage.googleapis.com/v0/b/shareheart-73b1a.appspot.com/o/Images%2Fcrianca_doacao.png?alt=media&token=fe754840-3e22-4d36-b8c8-a4dfd107cffb",
+        "titulo": "Futuro da criança",
+        "descricao": "Ajude a construir um futuro brilhante. Sua doação traz esperança e oportunidades para crianças necessitadas.",
+        "telefone": "+55 81 91234-5678",
+        "email": "fundacaocrianca@contato.com",
+        "endereco": "Rua Exemplo, 123"
+    }
+]

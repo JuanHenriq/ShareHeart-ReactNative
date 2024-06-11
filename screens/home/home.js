@@ -14,6 +14,9 @@ export default function HomeScreen() {
   const handleCategoryPress = (category) => {
     navigation.navigate('Doar', { selectedCategory: category });
   };
+  const handleDonatePress = () => {
+    navigation.navigate('Doar');
+  };
 
   return (
     <View style={styles.container}>
@@ -28,7 +31,7 @@ export default function HomeScreen() {
 
         <View style={styles.banner}>
           <Image source={require('../../assets/banner.jpg')} style={styles.banner} />
-          <TouchableOpacity style={styles.bannerButton}>
+          <TouchableOpacity style={styles.bannerButton} onPress={handleDonatePress}>
             <Text style={styles.bannerButtonText}>Faça doação</Text>
           </TouchableOpacity>
         </View>

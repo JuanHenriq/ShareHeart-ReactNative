@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, TouchableOpacity, Image, Linking, Modal, TextInput, Button } from "react-native";
+import { View, Text, TouchableOpacity, Image, Linking, Modal, TextInput, Button, ScrollView } from "react-native";
 import { RadioButton } from "react-native-paper";
 import styles from "./styles";
 import alimentosData from "../../data/alimentos.json";
 import causasData from "../../data/causas.json";
 import dinheiroData from "../../data/dinheiro.json";
 import roupasData from "../../data/roupas.json";
+import doacoesData from "../../data/doacoes.json"; // Combine todos os dados aqui
 import { auth } from "../../firebaseConfig";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
 const Donate = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(doacoesData); // Mostrar todos os itens inicialmente
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [donationAmount, setDonationAmount] = useState("");
@@ -21,9 +22,11 @@ const Donate = () => {
   const db = getFirestore();
 
   useEffect(() => {
-    const { selectedCategory } = route.params;
-    if (selectedCategory) {
-      handleCategorySelect(selectedCategory);
+    if (route.params) {
+      const { selectedCategory } = route.params;
+      if (selectedCategory) {
+        handleCategorySelect(selectedCategory);
+      }
     }
   }, [route.params]);
 
@@ -44,7 +47,7 @@ const Donate = () => {
         setItems(roupasData);
         break;
       default:
-        setItems([]);
+        setItems(doacoesData);
     }
   };
 
@@ -99,9 +102,9 @@ const Donate = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <RadioButton.Group
-        onValueChange={handleCategorySelect}
+        onValueChange={(value) => handleCategorySelect(value)}
         value={selectedCategory}
       >
         <View style={styles.categoriesContainer}>
@@ -184,8 +187,9 @@ const Donate = () => {
               <Button
                 onPress={() => setModalVisible(false)}
                 title="Cancelar"
-                color="#FF7700"
+                color="black"
               />
+              <View style={{ marginHorizontal: 10 }} /> 
               <Button
                 onPress={handleDonationSubmit}
                 title="OK"
@@ -195,7 +199,7 @@ const Donate = () => {
           </View>
         </View>
       </Modal>
-    </View>
+    </ScrollView>
   );
 };
 
