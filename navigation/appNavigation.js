@@ -1,4 +1,5 @@
 import React from 'react';
+import { Ionicons } from '@expo/vector-icons'; 
 import { NavigationContainer, CommonActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -69,7 +70,31 @@ function ProfileStackNavigator() {
 export function AppNavigation({ initialRoute }) {
   return (
     <NavigationContainer>
-      <Tab.Navigator initialRouteName={initialRoute}>
+      <Tab.Navigator 
+        initialRouteName={initialRoute}
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName;
+
+            // Ícone baseado na rota
+            if (route.name === 'Home') {
+              iconName = focused ? 'home' : 'home-outline';
+            } else if (route.name === 'Doar') {
+              iconName = focused ? 'heart' : 'heart-outline';
+            } else if (route.name === 'Notícias') {
+              iconName = focused ? 'newspaper' : 'newspaper-outline';
+            } else if (route.name === 'Profile') {
+              iconName = focused ? 'person' : 'person-outline';
+            }
+
+            return <Ionicons name={iconName} size={size} color={color} />;
+          },
+        })}
+        tabBarOptions={{
+          activeTintColor: '#FF7700',
+          inactiveTintColor: 'gray',
+        }}
+      >
         <Tab.Screen name="Home" component={HomeStackNavigator} />
         <Tab.Screen name="Doar" component={DonateScreen} />
         <Tab.Screen name="Notícias" component={NewsScreen} />

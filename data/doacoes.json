@@ -1,35 +1,38 @@
 [
     {
-        "foto": "https://firebasestorage.googleapis.com/v0/b/shareheart-73b1a.appspot.com/o/Images%2Fdoacao_alimento.png?alt=media&token=90bee118-d73f-429c-b703-7d32e9a3c10a",
-        "titulo": "Alimente a Esperança",
-        "descricao": "Sua contribuição pode transformar vidas. Com sua ajuda, podemos proporcionar nutrição, educação e um futuro melhor para crianças em situação de vulnerabilidade. Ajude-nos a alimentar sonhos e construir um mundo mais justo e cheio de oportunidades para todos.",
-        "telefone": "+55 81 91234-5678",
-        "email": "fundacaocrianca@contato.com",
-        "endereco": "Rua Exemplo, 123",
-        "site": "https://www.google.com"
+        "foto": "https://lbv.org/wp-content/uploads/2023/07/SaoPaulo.jpg",
+        "titulo": "Legião da Boa Vontade Brasil",
+        "descricao": "Fundada no Brasil, em 1950, no dia 1º de janeiro (Dia da Paz e da Confraternização Universal), pelo radialista, jornalista, escritor e poeta Alziro Zarur (1914-1979) tem como presidente o jornalista, escritor, compositor e educador José de Paiva Netto. A LBV é uma associação civil de direito privado, sem fins econômicos, com atuação preponderante na Assistência Social, que também oferece Educação Básica e técnica profissionalizante, além de realizar ações humanitárias, culturais e de comunicação social e educativa. Atua nas cinco regiões do país, em prol de pessoas e famílias em situação de vulnerabilidade social, somando ao auxílio material os valores da Espiritualidade Ecumênica.",
+        "telefone": "0800-055 50 99",
+        "email": "centralderelacionamento@lbv.org.br",
+        "endereco" :"Rua Sérgio Tomás, 740 | Bom Retiro | São Paulo/SP",
+        "site": "https://lbv.org/"
     },
     {
-        "foto": "https://firebasestorage.googleapis.com/v0/b/shareheart-73b1a.appspot.com/o/Images%2Fdoacao_banner.jpg?alt=media&token=040a61b5-6c41-4652-bcf1-ff114c3d040b",
-        "titulo": "Dê um Passo à Frente",
-        "descricao": "Sua contribuição pode transformar vidas. Com sua ajuda, podemos proporcionar nutrição, educação e um futuro melhor para crianças em situação de vulnerabilidade. Ajude-nos a alimentar sonhos e construir um mundo mais justo e cheio de oportunidades para todos.",
-        "telefone": "+55 81 91234-5678",
-        "email": "fundacaocrianca@contato.com",
-        "endereco": "Rua Exemplo, 123"
+        "foto": "https://media.licdn.com/dms/image/C4D1BAQEty7kMh6stqA/company-background_10000/0/1607088455474/habitat_para_a_humanidade_brasil_cover?e=2147483647&v=beta&t=_TG_tqySTorMYoZie7qYVg5y3bCNZ6AdvzKKDvrA4LM",
+        "titulo": "Habitat para a humanidade",
+        "descricao" : "Habitat para a Humanidade Brasil é uma organização da sociedade civil que, desde 1992, atua para combater as desigualdades e garantir que pessoas em condições de pobreza tenham um lugar digno para viver. Presente em mais de 70 países, a organização promove incidência em políticas públicas pelo direito à cidade e soluções de acesso à moradia, água e saneamento, em articulação com diversos setores e comunidades. Fundada nos Estados Unidos em 1976, a Habitat para a Humanidade Brasil faz parte da rede internacional Habitat for Humanity, que já beneficiou mais de 35 milhões de pessoas no mundo todo. No Brasil, a organização já desenvolveu projetos em 24 estados, transformando a vida de mais de 197 mil pessoas.",
+        "telefone" : " 11 5084 0012",
+        "email" :"contato@hph.org.br",
+        "endereco" :"Rua Pamplona, 818 – Jardins, São Paulo, SP – 01405-001",
+        "site" : "https://habitatbrasil.org.br/"
     },
     {
-        "foto": "https://firebasestorage.googleapis.com/v0/b/shareheart-73b1a.appspot.com/o/Images%2Fdoacao_palestina.png?alt=media&token=8444d513-6418-47fa-8502-7c4294556ff7",
-        "titulo": "Corações solidários",
-        "descricao": "Apoie causas sociais e fortaleça comunidades. Sua contribuição faz a diferença na vida de muitos.",
-        "telefone": "+55 81 91234-5678",
-        "email": "fundacaocoracoes@contato.com",
-        "endereco": "Rua Exemplo, 123"
+        "foto": "https://diadedoar.org.br/assets/banners/banner_home.png",
+        "titulo": "Dia de doar",
+        "descricao": "O Dia de Doar é um movimento para promover a generosidade e a cultura de doação. É uma mobilização que promove um país mais doador e empático por meio da conexão de pessoas. E faz isso celebrando o prazer que é doar, e impulsionando o hábito de doar o tempo todo.",
+        "telefone": " (41) 98824-3994",
+        "email": "contato@diadedoar.org.br",
+        "endereco": "São Paulo",
+        "site": "https://diadedoar.org.br/home"
     },
     {
-        "foto": "https://firebasestorage.googleapis.com/v0/b/shareheart-73b1a.appspot.com/o/Images%2Fcrianca_doacao.png?alt=media&token=fe754840-3e22-4d36-b8c8-a4dfd107cffb",
-        "titulo": "Futuro da criança",
-        "descricao": "Ajude a construir um futuro brilhante. Sua doação traz esperança e oportunidades para crianças necessitadas.",
-        "telefone": "+55 81 91234-5678",
-        "email": "fundacaocrianca@contato.com",
-        "endereco": "Rua Exemplo, 123"
+        "foto": "https://cdn-blog.doacoes.org.br/wp-content/uploads/2010/07/bumba-2.jpg",
+        "titulo": "Exército da salvação",
+        "descricao": "O Exército de Salvação (The Salvation Army), fundado em 1865, atua no Brasil desde 1922 com unidades de atendimento a crianças em situação de risco, projetos educacionais, programas de capacitação profissional, lares para idosos, entre outros. Foi indicado mais de 20 vezes ao Prêmio Nobel da Paz, e é uma das mais respeitadas instituições de caridade do mundo.",
+        "telefone": "4003-2299",
+        "email": "doacoes@exercitodoacoes.org.br",
+        "endereco": "Rua Passagem da Servidão Toyota, 1115, Jardim Gagliardi, São Bernardo do Campo - SP. CEP 09891-005",
+        "site": "https://www.exercitodoacoes.org.br/"
     }
 ]

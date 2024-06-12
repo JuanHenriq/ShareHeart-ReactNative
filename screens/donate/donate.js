@@ -6,14 +6,14 @@ import alimentosData from "../../data/alimentos.json";
 import causasData from "../../data/causas.json";
 import dinheiroData from "../../data/dinheiro.json";
 import roupasData from "../../data/roupas.json";
-import doacoesData from "../../data/doacoes.json"; // Combine todos os dados aqui
+import doacoesData from "../../data/doacoes.json"; 
 import { auth } from "../../firebaseConfig";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
 const Donate = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [items, setItems] = useState(doacoesData); // Mostrar todos os itens inicialmente
+  const [items, setItems] = useState(doacoesData);
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [donationAmount, setDonationAmount] = useState("");

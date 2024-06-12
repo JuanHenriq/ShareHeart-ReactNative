@@ -1,10 +1,11 @@
 [
     {
-        "foto": "https://firebasestorage.googleapis.com/v0/b/shareheart-73b1a.appspot.com/o/Images%2Fdoacao_palestina.png?alt=media&token=8444d513-6418-47fa-8502-7c4294556ff7",
-        "titulo": "Corações solidários",
-        "descricao": "Apoie causas sociais e fortaleça comunidades. Sua contribuição faz a diferença na vida de muitos.",
-        "telefone": "+55 81 91234-5678",
-        "email": "fundacaocoracoes@contato.com",
-        "endereco": "Rua Exemplo, 123"
+        "foto": "https://lbv.org/wp-content/uploads/2023/07/SaoPaulo.jpg",
+        "titulo": "Legião da Boa Vontade Brasil",
+        "descricao": "Fundada no Brasil, em 1950, no dia 1º de janeiro (Dia da Paz e da Confraternização Universal), pelo radialista, jornalista, escritor e poeta Alziro Zarur (1914-1979) tem como presidente o jornalista, escritor, compositor e educador José de Paiva Netto. A LBV é uma associação civil de direito privado, sem fins econômicos, com atuação preponderante na Assistência Social, que também oferece Educação Básica e técnica profissionalizante, além de realizar ações humanitárias, culturais e de comunicação social e educativa. Atua nas cinco regiões do país, em prol de pessoas e famílias em situação de vulnerabilidade social, somando ao auxílio material os valores da Espiritualidade Ecumênica.",
+        "telefone": "0800-055 50 99",
+        "email": "centralderelacionamento@lbv.org.br",
+        "endereco" :"Rua Sérgio Tomás, 740 | Bom Retiro | São Paulo/SP",
+        "site": "https://lbv.org/"
     }
 ]
