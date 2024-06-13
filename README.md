@@ -41,6 +41,11 @@ Siga as instruções abaixo para clonar o repositório, instalar as dependência
     npx react-native run-ios
     ```
 
+    Para iniciar o projeto e servidor local:
+    ```bash
+    npx expo start
+    ```
+
 ## Configuração do Firebase
 
 É necessário criar um arquivo `firebaseconfig.js` no diretório do projeto com o seguinte conteúdo:
