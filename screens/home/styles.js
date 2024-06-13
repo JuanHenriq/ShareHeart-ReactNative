@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
-  profileImage: {
+  iconImage: {
     width: 40,
     height: 40,
   },

@@ -26,7 +26,7 @@ export default function HomeScreen() {
             <Text style={styles.headerText}>Olá, seja</Text>
             <Text style={styles.welcomeText}>BEM-VINDO!</Text>
           </View>
-          <Image source={require('../../assets/profile.png')} style={styles.profileImage} />
+          <Image source={require('../../assets/icons/main_icon.png')} style={styles.iconImage} />
         </View>
 
         <View style={styles.banner}>
